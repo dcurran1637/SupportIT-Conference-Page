@@ -1,0 +1,184 @@
+/* ----------------------------------------------------
+   GLOBAL PAGE STYLE
+----------------------------------------------------- */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    text-align: center;
+}
+
+/* ----------------------------------------------------
+   HEADER
+----------------------------------------------------- */
+.header-banner {
+    background: #eeeeee;
+    padding: 40px 0 50px 0;
+    border-bottom: 1px solid #d8d8d8;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Logo area */
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 20px;
+}
+
+.logo-wrapper img {
+    height: clamp(120px, 16vw, 200px); /* Auto-scales on all screens */
+    object-fit: contain;
+    transition: transform 0.25s ease;
+}
+
+/* Main title */
+.header-banner h1 {
+    font-size: clamp(26px, 4vw, 38px);
+    font-weight: 300;
+    margin: 0;
+    color: #444;
+    letter-spacing: 0.5px;
+}
+
+/* ----------------------------------------------------
+   NAVIGATION
+----------------------------------------------------- */
+.info-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.info-nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 0;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    flex-wrap: wrap;   /* Makes nav wrap gracefully on mobile */
+}
+
+.info-nav li {
+    background: #079cff;
+    border-right: 1px solid #00000022;
+    padding: 12px 25px;
+    font-size: clamp(12px, 2.5vw, 15px);
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+/* Remove divider from last item */
+.info-nav li:last-child {
+    border-right: none;
+}
+
+/* Active-look */
+.info-nav li:first-child {
+    background: #079cff;
+}
+
+/* Hover */
+.info-nav li:hover {
+    background: #037dcf;
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.12);
+}
+
+/* ----------------------------------------------------
+   CONTENT CONTAINER
+----------------------------------------------------- */
+.info-container {
+    width: min(90%, 760px);    /* Perfect responsive center column */
+    background: #ffffff;
+    margin: 60px auto;
+    padding: 40px 40px 60px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+}
+
+/* Section headings */
+.info-container h2,
+.info-container h3 {
+    font-weight: 300;
+    color: #444;
+    text-align: center;
+    letter-spacing: 0.4px;
+}
+
+/* Main section title */
+.info-container h2 {
+    font-size: clamp(24px, 3vw, 34px);
+    margin-bottom: 25px;
+}
+
+/* Subsection titles */
+.info-container h3 {
+    font-size: clamp(18px, 2.8vw, 24px);
+    margin-top: 45px;
+    margin-bottom: 10px;
+}
+
+/* Body text */
+.info-container p {
+    font-size: clamp(14px, 2.4vw, 16px);
+    line-height: 1.75;
+    margin-bottom: 18px;
+    color: #555;
+}
+
+/* ----------------------------------------------------
+   LINKS
+----------------------------------------------------- */
+.info-container a {
+    color: #2b7bc3;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.info-container a:hover {
+    color: #165a8a;
+    text-decoration: underline;
+}
+
+/* ----------------------------------------------------
+   MOBILE TUNING
+----------------------------------------------------- */
+@media (max-width: 600px) {
+
+    .header-banner {
+        padding: 20px 10px;
+    }
+
+    .logo-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .info-container {
+        padding: 25px 20px 45px 20px;
+        margin-top: 40px;
+    }
+
+    .info-nav ul {
+        box-shadow: none;
+        background: none;
+        border-radius: 0;
+    }
+
+    .info-nav li {
+        width: 100%;
+        max-width: 260px;
+        margin: 5px auto;
+        border-radius: 6px;
+    }
+}
